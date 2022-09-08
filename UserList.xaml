@@ -1,0 +1,33 @@
+﻿<Page x:Class="testWPF.UserList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:testWPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserList" Background="DarkSeaGreen" Foreground="White" FontSize="16">
+
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="USER LIST" Margin="350 20 330 20" FontSize="20" FontWeight="ExtraBold"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="USERNAME" VerticalAlignment="Top" Margin="20 10 10 10" FontWeight="SemiBold"/>
+                <TextBox Name="txtNewUserName" Height="23" VerticalAlignment="Top" Width="120" Margin="20 10 10 10"/>
+                <TextBlock Text="PASSWORD" VerticalAlignment="Top" Margin="20 10 10 10" FontWeight="SemiBold"/>
+                <TextBox Name="PwdUser" Height="23" VerticalAlignment="Top" Width="120" Margin="20 10 10 10"/>
+                <Button Content="ADD USER" VerticalAlignment="Top" Width="85" Height="23" Name="btnUserSubmit" Click="btnUserSubmit_Click" Margin=" 20 10 10 10" FontWeight="SemiBold"/>
+            </StackPanel>
+            <Separator HorizontalAlignment="Center" Background="Black"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="USERNAME" VerticalAlignment="Top" Margin="20 10 10 10" FontWeight="SemiBold"/>
+                <TextBox x:Name="textbox_UsrSearch" VerticalAlignment="Top" Width="120" Height="23" Margin="20 10 10 10"/>
+                <Button x:Name="btn_UsrUpdate" Click="btn_UsrUpdate_Click" Content="UPDATE" VerticalAlignment="Top" Width="75" Height="23" Margin="20 10 10 10" FontWeight="SemiBold"/>
+                <Button x:Name="btn_UsrDel" Click="btn_UsrDel_Click" Content="DELETE" VerticalAlignment="Top" Width="75" Height="23" Margin="10" FontWeight="SemiBold"/>
+            </StackPanel>
+        </StackPanel>
+        <Separator HorizontalAlignment="Center" Background="Black"/>
+        <DataGrid HorizontalAlignment="Left" Height="264" Margin="28,176,0,0" VerticalAlignment="Top" Width="465" Name="DataGrid_User"/>
+    </Grid>
+</Page>
+ 

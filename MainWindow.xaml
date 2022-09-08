@@ -1,0 +1,28 @@
+﻿<Window x:Class="testWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:testWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="680" Width="800" Background="DarkSeaGreen">
+    
+    <Grid>
+        <StackPanel Orientation="Vertical" MinWidth="200" HorizontalAlignment="Left">
+            <Label Content="Menu Section" HorizontalContentAlignment="Center" Background="BurlyWood" FontSize="25" MinWidth="200" Width="242" VerticalAlignment="Top"/>
+            <Button x:Name="btnVendor" Content="Vendor" Click="btnVendor_Click" Padding="12" Foreground="Beige" Background="RosyBrown"  FontSize="22"></Button>
+            <Button x:Name="btnProduct" Content="Product" Click="btnProduct_Click" Padding="12" Foreground="Beige" Background="RosyBrown"  FontSize="22"></Button>
+            <Button x:Name="btnPBE" Content="Purchase Bill Entry" Click="btnPBE_Click" Padding="12" Foreground="Beige" Background="RosyBrown"  FontSize="22"></Button>
+            <Button x:Name="btnSAE" Content="Sale Acceptance Entry" Click="btnSAE_Click" Padding="12" Foreground="Beige" Background="RosyBrown"  FontSize="22"></Button>
+            <Button x:Name="btnRSE" Content="Return Sale Entry" Click="btnRSE_Click" Padding="12" Foreground="Beige" Background="RosyBrown"  FontSize="22"></Button>
+            <Button x:Name="btnInventory" Content="Inventory Report" Click="btnInventory_Click" Padding="12" Foreground="Beige" Background="RosyBrown"  FontSize="22"></Button>
+            <Button x:Name="btnReport" Content="Report" Click="btnReport_Click" Padding="12" Foreground="Beige" Background="RosyBrown"  FontSize="22"></Button>
+            <Button x:Name="btnUser" Content="User" Click="btnUser_Click" Padding="12" Foreground="Beige" Background="RosyBrown"  FontSize="22"></Button>
+            <Button x:Name="btnCategory" Content="Category" Click="btnCategory_Click" Padding="12" Foreground="Beige" Background="RosyBrown"  FontSize="22"></Button>
+            
+            <Button x:Name="btnLogout" Content="Logout" Click="btnLogout_Click" Padding="12" Foreground="Beige" Background="RosyBrown" FontSize="22"></Button>
+        
+        </StackPanel>
+        <Frame x:Name="Main" Margin="238,0,-0.4,0" NavigationUIVisibility="Hidden"></Frame>
+    </Grid>
+</Window>

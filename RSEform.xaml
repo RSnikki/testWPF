@@ -1,0 +1,119 @@
+﻿<Window x:Class="testWPF.RSEform"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:testWPF"
+        mc:Ignorable="d"
+        Title="RSEform" Height="550" Width="1100" Background="DarkSeaGreen" Foreground="White" FontSize="18">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Width" Value="200"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="BorderBrush"  Value="Black"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>
+    </Window.Resources>
+    <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width ="20"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="3" Text="RETURN SALE ENTRY" Margin="10" FontSize="20" FontWeight="ExtraBlack"/>
+
+            <TextBlock Grid.Row="2" Grid.Column="1" Text="RETURN SALE NO." Margin="0 5 0 5" FontWeight="SemiBold"/>
+            <TextBox Grid.Row="2" Grid.Column="2" x:Name="tb_RSEno" Margin="0 5 0 5"/>
+
+            <TextBlock Grid.Row="3" Grid.Column="1" Text="SALE NO." Margin="0 5 0 5" FontWeight="SemiBold"/>
+            <TextBox Grid.Row="3" Grid.Column="2" x:Name="tb_RSEsaleno" Margin="0 5 0 5" LostFocus="tb_RSEsaleno_LostFocus"/>
+            <Button Grid.Row="3" Grid.Column="3" Height="40" Width="175" Name="btn_SearchSale" Content="Search" Click="btn_SearchSale_Click" />
+
+            <TextBlock Grid.Row="4" Grid.Column="1" Text="DATE" Margin="0 5 0 5" FontWeight="SemiBold"/>
+            <TextBox Grid.Row="4" Grid.Column="2" x:Name="tb_RSEdate" Margin="0 5 0 10"/>
+
+
+            <Label Grid.Row="5" Grid.Column=" 1" Content="PRODUCT NAME" FontWeight="SemiBold"/>
+            <Label Grid.Row="5" Grid.Column="2" Content="SP/UNIT"/>
+            <Label Grid.Row="5" Grid.Column="3" Content="QUANTITY SOLD" FontWeight="SemiBold"/>
+            <Label Grid.Row="5" Grid.Column="4" Content="QUANTITY RETURNED" FontWeight="SemiBold"/>
+            <Label Grid.Row="5" Grid.Column="5" Content="PRICE RETURNED" FontWeight="SemiBold"/>
+
+
+
+            <ComboBox Grid.Row="5" Grid.Column="1" x:Name="cb_RSEpn1" SelectionChanged="cb_RSEpn1_SelectionChanged" Height="31" Margin="0,36.4,0,0" Grid.RowSpan="3" VerticalAlignment="Top" />
+            <ComboBox Grid.Row="7" Grid.Column="1" x:Name="cb_RSEpn2"  SelectionChanged="cb_RSEpn2_SelectionChanged" />
+            <ComboBox Grid.Row="8" Grid.Column="1" x:Name="cb_RSEpn3" SelectionChanged="cb_RSEpn3_SelectionChanged" />
+            <ComboBox Grid.Row="9" Grid.Column="1" x:Name="cb_RSEpn4" SelectionChanged="cb_RSEpn4_SelectionChanged" />
+            <ComboBox Grid.Row="10" Grid.Column="1" x:Name="cb_RSEpn5" SelectionChanged="cb_RSEpn5_SelectionChanged" />
+
+            <TextBox Grid.Row="6" Grid.Column="2" x:Name="tb_RSEsp1" />
+            <TextBox Grid.Row="7" Grid.Column="2" x:Name="tb_RSEsp2" />
+            <TextBox Grid.Row="8" Grid.Column="2" x:Name="tb_RSEsp3"/>
+            <TextBox Grid.Row="9" Grid.Column="2" x:Name="tb_RSEsp4" />
+            <TextBox Grid.Row="10" Grid.Column="2" x:Name="tb_RSEsp5" />
+
+            <TextBox Grid.Row="6" Grid.Column="3" x:Name="tb_RSEqs1" />
+            <TextBox Grid.Row="7" Grid.Column="3" x:Name="tb_RSEqs2" />
+            <TextBox Grid.Row="8" Grid.Column="3" x:Name="tb_RSEqs3" />
+            <TextBox Grid.Row="9" Grid.Column="3" x:Name="tb_RSEqs4" />
+            <TextBox Grid.Row="10" Grid.Column="3" x:Name="tb_RSEqs5" />
+
+            <TextBox Grid.Row="6" Grid.Column="4" x:Name="tb_RSEq1" LostFocus="tb_RSEq1_LostFocus" />
+            <TextBox Grid.Row="7" Grid.Column="4" x:Name="tb_RSEq2" LostFocus="tb_RSEq2_LostFocus" />
+            <TextBox Grid.Row="8" Grid.Column="4" x:Name="tb_RSEq3" LostFocus="tb_RSEq3_LostFocus"  />
+            <TextBox Grid.Row="9" Grid.Column="4" x:Name="tb_RSEq4" LostFocus="tb_RSEq4_LostFocus" />
+            <TextBox Grid.Row="10" Grid.Column="4" x:Name="tb_RSEq5" LostFocus="tb_RSEq5_LostFocus" />
+
+
+            <TextBox Grid.Row="6" Grid.Column="5" x:Name="tb_RSEp1" />
+            <TextBox Grid.Row="7" Grid.Column="5" x:Name="tb_RSEp2" />
+            <TextBox Grid.Row="8" Grid.Column="5" x:Name="tb_RSEp3" />
+            <TextBox Grid.Row="9" Grid.Column="5" x:Name="tb_RSEp4" />
+            <TextBox Grid.Row="10" Grid.Column="5" x:Name="tb_RSEp5" />
+
+            <Label Grid.Row="11" Grid.Column="4" Content="TOTAL" FontWeight="SemiBold" />
+            <TextBox Grid.Row="11" Grid.Column="5" x:Name="tb_RSEtp" />
+
+            <Button Grid.Row="12" Grid.Column="5" Height="50" Width="200" Name="btn_AddRSB" Click="btn_AddRSB_Click" Content="ADD" Margin="0 10 0 0"/>
+
+
+        </Grid>
+    </ScrollViewer>
+</Window>

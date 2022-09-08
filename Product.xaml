@@ -1,0 +1,23 @@
+﻿<Page x:Class="testWPF.Product"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:testWPF"
+      mc:Ignorable="d" 
+      d:DesignHeight="750" d:DesignWidth="800"
+      Title="Product" Background="DarkSeaGreen" Foreground="White" FontSize="16">
+    <StackPanel Orientation="Vertical">
+        <TextBlock Text="PRODUCT" HorizontalAlignment="Center" FontSize="30" FontWeight="ExtraBold" Margin="0 25 0 0"/>
+        <StackPanel Orientation="Horizontal" >
+            <Button x:Name="btnProductAdd" Click="btnProductAdd_Click" Content="ADD" Width="100" Height="30" Margin="25 25 25 10"/>
+            <TextBox x:Name="tb_ProductSearch" Width="150" Height="30" Margin="75 25 0 10"/>
+            <Button x:Name="btnProductEdit" Click="btnProductEdit_Click" Content="EDIT" Width="100" Height="30" Margin="10 25 25 10"/>
+        </StackPanel>
+
+        <Separator Background="Black"></Separator>
+        <DataGrid x:Name="dg_Pview" Height="597" Margin="28,0" />
+
+
+    </StackPanel>
+</Page>

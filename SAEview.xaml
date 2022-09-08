@@ -1,0 +1,119 @@
+﻿<Window x:Class="testWPF.SAEview"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:testWPF"
+        mc:Ignorable="d"
+        Title="SAEview" Height="550" Width="970" Background="DarkSeaGreen" Foreground="White" FontSize="18">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Width" Value="150"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="BorderBrush"  Value="Black"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+        </Style>
+    </Window.Resources>
+    <ScrollViewer HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Visible">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width ="20"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="3" Text="SALE BILL VIEW" Margin="10" FontSize="20" FontWeight="ExtraBlack"/>
+
+            <TextBlock Grid.Row="2" Grid.Column="1" Text="SALE BILL NO. " Margin="0 5 0 5" FontWeight="SemiBold"/>
+            <TextBox Grid.Row="2" Grid.Column="2" x:Name="tb_SAEVinvoce" Margin="0 5 0 5"/>
+
+            <TextBlock Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="1" Text="CUSTOMER NAME" Margin="0 5 0 5" FontWeight="SemiBold"/>
+            <TextBox  Grid.Row="3" Grid.Column="2" x:Name="tb_SAEVcname" Margin="0 5 0 5"/>
+
+            <TextBlock Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="1" Text="Contact" Margin="0 5 0 5" FontWeight="SemiBold"/>
+            <TextBox  Grid.Row="4" Grid.Column="2" x:Name="tb_SAEVcno" Margin="0 5 0 5"/>
+
+            <TextBlock Grid.Row="5" Grid.Column="1" Text="DATE" Width="150" Margin="0 5 0 5" FontWeight="SemiBold"/>
+            <TextBox Grid.Row="5" Grid.Column="2" x:Name="tb_SAEVdate" Margin="0 5 0 10"/>
+
+            <Label Grid.Row="6" Grid.Column="1" Content="SB Code"/>
+            <Label Grid.Row="6" Grid.Column="2" Content="Product Code"/>
+            <Label Grid.Row="6" Grid.Column="3" Content="Product Name"/>
+            <Label Grid.Row="6" Grid.Column="4" Content="SP/Unit"/>
+            <Label Grid.Row="6" Grid.Column="5" Content="Quantity"/>
+            <Label Grid.Row="6" Grid.Column="6" Content="Sale Price"/>
+
+            <TextBox Grid.Row="7" Grid.Column="1" x:Name="cb_SAEVDid1"/>
+            <TextBox Grid.Row="8" Grid.Column="1" x:Name="cb_SAEVid2"/>
+            <TextBox Grid.Row="9" Grid.Column="1" x:Name="cb_SAEVid3"/>
+            <TextBox Grid.Row="10" Grid.Column="1" x:Name="cb_SAEVid4"/>
+            <TextBox Grid.Row="11" Grid.Column="1" x:Name="cb_SAEVid5"/>
+
+            <TextBox Grid.Row="7" Grid.Column="2" x:Name="cb_SAEVpc1"/>
+            <TextBox Grid.Row="8" Grid.Column="2" x:Name="cb_SAEVpc2"/>
+            <TextBox Grid.Row="9" Grid.Column="2" x:Name="cb_SAEVpc3"/>
+            <TextBox Grid.Row="10" Grid.Column="2" x:Name="cb_SAEVpc4"/>
+            <TextBox Grid.Row="11" Grid.Column="2" x:Name="cb_SAEVpc5"/>
+
+
+
+            <TextBox Grid.Row="7" Grid.Column="3" x:Name="tb_SAEVpn1" />
+            <TextBox Grid.Row="8" Grid.Column="3" x:Name="tb_SAEVpn2" />
+            <TextBox Grid.Row="9" Grid.Column="3" x:Name="tb_SAEVpn3" />
+            <TextBox Grid.Row="10" Grid.Column="3" x:Name="tb_SAEVpn4" />
+            <TextBox Grid.Row="11" Grid.Column="3" x:Name="tb_SAEVpn5" />
+
+            <TextBox Grid.Row="7" Grid.Column="4" x:Name="tb_SAEVcp1" />
+            <TextBox Grid.Row="8" Grid.Column="4" x:Name="tb_SAEVcp2" />
+            <TextBox Grid.Row="9" Grid.Column="4" x:Name="tb_SAEVcp3" />
+            <TextBox Grid.Row="10" Grid.Column="4" x:Name="tb_SAEVcp4" />
+            <TextBox Grid.Row="11" Grid.Column="4" x:Name="tb_SAEVcp5" />
+
+            <TextBox Grid.Row="7" Grid.Column="5" x:Name="tb_SAEVq1" />
+            <TextBox Grid.Row="8" Grid.Column="5" x:Name="tb_SAEVq2" />
+            <TextBox Grid.Row="9" Grid.Column="5" x:Name="tb_SAEVq3" />
+            <TextBox Grid.Row="10" Grid.Column="5" x:Name="tb_SAEVq4" />
+            <TextBox Grid.Row="11" Grid.Column="5" x:Name="tb_SAEVq5" />
+
+            <TextBox Grid.Row="7" Grid.Column="6" x:Name="tb_SAEVp1" />
+            <TextBox Grid.Row="8" Grid.Column="6" x:Name="tb_SAEVp2" />
+            <TextBox Grid.Row="9" Grid.Column="6" x:Name="tb_SAEVp3" />
+            <TextBox Grid.Row="10" Grid.Column="6" x:Name="tb_SAEVp4" />
+            <TextBox Grid.Row="11" Grid.Column="6" x:Name="tb_SAEVp5" />
+
+            <Label Grid.Row="12" Grid.Column="5" Content="Total Price"/>
+            <TextBox Grid.Row="12" Grid.Column="6" x:Name="tb_SAEVtp"/>
+
+        </Grid>
+    </ScrollViewer>
+</Window>
